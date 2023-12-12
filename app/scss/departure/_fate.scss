@@ -1,0 +1,50 @@
+.fate {
+  &__title {
+    margin-bottom: 65px;
+  }
+
+  &__items {
+    @include flex-column(64);
+  }
+
+  &__item {
+    display: flex;
+    gap: 60px;
+
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__player {
+    max-width: 355px;
+    width: 100%;
+    position: relative;
+  }
+
+  &__img {
+    height: 100%;
+    @include objectCoverBg;
+    border-radius: 24px;
+    overflow: hidden;
+  }
+
+  &__content {
+    max-width: 705px;
+    width: 100%;
+  }
+
+  &__name {
+    margin-bottom: 15px;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: $inter;
+    letter-spacing: -0.24px;
+    color: $white;
+  }
+
+  &__text {
+    font-weight: 500;
+    @include flex-column(15);
+  }
+}

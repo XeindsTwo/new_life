@@ -1,0 +1,18 @@
+@import 'reset';
+@import 'fonts';
+@import 'vars';
+@import 'mixin';
+@import 'libs';
+@import 'global';
+
+@import 'components/header';
+@import 'components/start';
+@import 'components/modal';
+@import 'components/btn';
+
+@import 'payment';
+
+@import 'home/steps';
+
+@import 'departure/services';
+@import 'departure/fate';

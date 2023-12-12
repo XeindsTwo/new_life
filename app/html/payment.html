@@ -1,0 +1,43 @@
+@include('components/_head.html', {
+title: 'Оплата | New Life '
+})
+
+@include('components/_header.html')
+<main>
+    <section class="payment">
+        <div class="container">
+            <h1 class="payment__title section-title">Способы оплаты</h1>
+            <ul class="payment__list">
+                <li class="payment__item">
+                    <div class="payment__icon">
+                        <img src="images/icons/cash.svg" alt="оплата наличными" width="24" height="16">
+                    </div>
+                    <span class="payment__name">Наличные</span>
+                    <p class="payment__text">
+                        Вы можете безопасно и анонимно оплатить услуги с помощью наличных денег
+                    </p>
+                </li>
+                <li class="payment__item">
+                    <div class="payment__icon">
+                        <img src="images/icons/crypto.svg" alt="оплата наличными" width="24" height="24">
+                    </div>
+                    <span class="payment__name">Криптовалюта</span>
+                    <p class="payment__text">
+                        Вы можете оплатить наши услуги любой удобной вам криптовалютой сохраняя анонимность
+                    </p>
+                </li>
+                <li class="payment__item">
+                    <div class="payment__icon">
+                        <img src="images/icons/buy.svg" alt="оплата наличными" width="24" height="18">
+                    </div>
+                    <span class="payment__name">Под видом покупки</span>
+                    <p class="payment__text">
+                        Вы можете безопасно опатить наши услуги под видом фоициальной покупки чего-либо
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </section>
+</main>
+@include('components/_footer.html')
+<script src="js/main.min.js" type="module" defer></script>

@@ -1,0 +1,120 @@
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  max-width: 470px;
+  width: 100%;
+  padding: 25px 30px;
+  background-color: $black300;
+  border-radius: 12px;
+  transform: translate(-50%, 0%);
+  opacity: 0;
+  user-select: none;
+  pointer-events: none;
+  transition: opacity .7s, transform .7s;
+
+  &--active {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 100;
+    user-select: auto;
+  }
+
+  &__head {
+    justify-content: space-between;
+    display: flex;
+    gap: 40px;
+    margin-bottom: 30px;
+    align-items: center;
+  }
+
+  &__title,
+  &__link {
+    font-size: 24px;
+    line-height: 1;
+    font-weight: 600;
+    letter-spacing: -0.48px;
+  }
+
+  &__title {
+    line-height: 1;
+    color: $white;
+    font-family: $inter;
+  }
+
+  &__close {
+    display: flex;
+    transition: opacity .4s;
+
+    &:hover {
+      svg path {
+        fill: $accent;
+      }
+    }
+
+    &:active {
+      opacity: .5;
+    }
+  }
+
+  &__socials {
+    @include flex-column(12);
+  }
+
+  &__link {
+    border-radius: 4px;
+    transition: color .4s;
+    color: $white;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    padding: 15px 18px;
+    position: relative;
+    overflow: hidden;
+
+    &::before, &::after {
+      @include pseudo;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transition: all .4s;
+    }
+
+    &::before {
+      z-index: -2;
+      background-color: $black500;
+    }
+
+    &::after {
+      z-index: -1;
+      top: -130%;
+    }
+
+    &:hover {
+      &::after {
+        top: 0;
+      }
+    }
+
+    &--telegram {
+      &::after {
+        background-color: #0088cc;
+      }
+    }
+
+    &--twitter {
+      &::after {
+        background-color: #1DA1F2;
+      }
+    }
+
+    &--facebook {
+      &::after {
+        background-color: #4267B2;
+      }
+    }
+  }
+}

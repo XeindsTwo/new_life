@@ -1,0 +1,39 @@
+.payment {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 24px;
+  }
+
+  &__item {
+    background-color: $black300;
+    border-radius: 26px;
+    padding: 32px 34px;
+    text-align: center;
+  }
+
+  &__icon {
+    margin: 0 auto 24px;
+    @include flex-center;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background-color: $accent;
+    padding: 14px;
+  }
+
+  &__name {
+    font-size: 26px;
+    line-height: 0.95;
+    font-weight: 600;
+    letter-spacing: -0.39px;
+    color: $white;
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  &__text {
+    font-weight: 500;
+    letter-spacing: -0.18px;
+  }
+}

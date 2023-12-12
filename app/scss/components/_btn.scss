@@ -1,0 +1,72 @@
+.btn {
+  font-family: $inter;
+  padding: 11px 16px;
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 600;
+  color: $white;
+  border-radius: 12px;
+  border: 2px solid rgba($white, .16);
+  transition: all .4s;
+
+  &:hover {
+    border-color: $red;
+  }
+
+  &:active {
+    color: $red;
+    border-color: $red;
+  }
+
+  &--long,
+  &--red {
+    padding: 17px 24px;
+    border-radius: 9px;
+  }
+
+  &--long {
+    width: 100%;
+    font-family: $sfpro;
+  }
+
+  &--red {
+    background-color: $accent;
+    border-color: $accent;
+
+    &:hover {
+      background-color: transparent;
+      color: $white;
+    }
+
+    &:active {
+      background-color: transparent;
+      opacity: .5;
+    }
+  }
+}
+
+.btn-play {
+  width: 45px;
+  height: 45px;
+  @include topLeft50;
+  position: absolute;
+  transition: opacity .4s, transform .4s;
+
+  &:hover {
+    transform: translate(-50%, -50%) scale(1.3);
+    opacity: .7;
+  }
+
+  &:active {
+    opacity: .4;
+  }
+
+  &::before {
+    @include pseudo;
+    @include bg;
+    @include topLeft50;
+    width: 21px;
+    height: 27px;
+    background-image: url("../images/icons/play.svg");
+  }
+}
