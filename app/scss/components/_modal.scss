@@ -12,6 +12,12 @@
   user-select: none;
   pointer-events: none;
   transition: opacity .7s, transform .7s;
+  @include r($sm) {
+    padding: 25px;
+  }
+  @media (max-width: 530px) {
+    width: calc(100% - 30px);
+  }
 
   &--active {
     transform: translate(-50%, -50%);
@@ -27,6 +33,9 @@
     gap: 40px;
     margin-bottom: 30px;
     align-items: center;
+    @include r($lg) {
+      margin-bottom: 25px;
+    }
   }
 
   &__title,
@@ -35,6 +44,9 @@
     line-height: 1;
     font-weight: 600;
     letter-spacing: -0.48px;
+    @include r($tablet) {
+      font-size: 22px;
+    }
   }
 
   &__title {
@@ -72,6 +84,13 @@
     padding: 15px 18px;
     position: relative;
     overflow: hidden;
+    @include r($sm) {
+      font-size: 20px;
+      padding: 15px;
+    }
+    @media (max-width: 400px) {
+      font-size: 18px;
+    }
 
     &::before, &::after {
       @include pseudo;

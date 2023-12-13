@@ -1,16 +1,47 @@
 .start {
-  margin-top: 110px;
-
   &__inner {
     display: flex;
     align-items: center;
     gap: 50px;
     justify-content: space-between;
+
+    &--departure {
+      @include r($lg) {
+        flex-direction: column;
+      }
+      @media (max-width: 860px) {
+        gap: 35px;
+      }
+    }
+
+    &--main {
+      @media (max-width: 860px) {
+        flex-direction: column;
+        text-align: center;
+        gap: 35px;
+      }
+    }
   }
 
   &__content {
     max-width: 435px;
     width: 100%;
+
+    &--departure {
+      @media (max-width: 1050px) {
+        max-width: 400px;
+      }
+      @include r($lg) {
+        max-width: 600px;
+        text-align: center;
+      }
+    }
+
+    &--main {
+      @media (max-width: 860px) {
+        max-width: 600px;
+      }
+    }
   }
 
   &__subtitle {
@@ -22,6 +53,15 @@
     margin-bottom: 28px;
     letter-spacing: 0.18px;
     font-weight: 600;
+    font-size: 18px;
+    @include r($lg) {
+      margin-bottom: 25px;
+      letter-spacing: 0.08px;
+    }
+    @include r($phone) {
+      font-size: 16px;
+      margin-bottom: 18px;
+    }
   }
 
   &__text {
@@ -31,6 +71,21 @@
     letter-spacing: -0.2px;
     font-size: 20px;
     margin-bottom: 38px;
+    @media (max-width: 860px) {
+      max-width: 500px;
+      font-weight: 400;
+      letter-spacing: 0;
+      margin: 0 auto 30px;
+    }
+    @include r($sm) {
+      font-size: 18px;
+      letter-spacing: -0.1px;
+    }
+
+    &--departure {
+      @include r($lg);
+      margin: 0 auto 30px;
+    }
   }
 
   &__service {
@@ -41,6 +96,12 @@
     overflow: hidden;
     max-width: 550px;
     width: 100%;
+    @include r($lg) {
+      max-width: 100%;
+    }
+    @include r($tablet) {
+      max-width: 600px;
+    }
   }
 
   &__list {
@@ -49,6 +110,13 @@
     max-height: 465px;
     padding-right: 12px;
     padding-bottom: 16px;
+    @include r($lg) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include r($tablet) {
+      grid-template-columns: repeat(1, 1fr);
+    }
 
     &::-webkit-scrollbar {
       box-sizing: content-box;
@@ -82,6 +150,11 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 12px;
+    @include r($phone) {
+      flex-direction: column;
+      gap: 6px;
+      align-items: flex-start;
+    }
   }
 
   &__name {
@@ -95,6 +168,13 @@
     letter-spacing: -0.27px;
     font-weight: 500;
     font-style: italic;
+    max-width: 90px;
+    width: 100%;
+    text-align: right;
+    @include r($phone) {
+      max-width: 100%;
+      width: auto;
+    }
   }
 
   &__info {
@@ -109,6 +189,23 @@
     justify-content: center;
     flex-direction: column;
     text-align: center;
+    font-size: 18px;
+    @include r($lg) {
+      padding: 25px 45px;
+      border-radius: 20px;
+    }
+    @media (max-width: 860px) {
+      margin: 0 auto;
+    }
+    @media (max-width: 670px) {
+      border-radius: 16px;
+    }
+    @include r($sm) {
+      padding: 25px 30px;
+    }
+    @include r($phone) {
+      padding: 23px 20px;
+    }
 
     &-avatar {
       @include objectCoverBg;
@@ -123,11 +220,21 @@
       font-weight: 700;
       font-family: $inter;
       letter-spacing: -0.24px;
+      @include r($sm) {
+        font-size: 22px;
+        letter-spacing: -0.16px;
+      }
     }
 
     &-text {
       max-width: 290px;
       letter-spacing: -0.18px;
+      @include r($desktop) {
+        max-width: 320px;
+      }
+      @include r($lg) {
+        max-width: 100%;
+      }
     }
   }
 }

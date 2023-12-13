@@ -1,4 +1,9 @@
 .payment {
+  margin-top: -30px;
+  @include r($desktop) {
+    margin-top: 0;
+  }
+
   &__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

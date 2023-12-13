@@ -68,6 +68,34 @@ main {
   line-height: .95;
   color: $white;
   margin-bottom: 28px;
+  @media (max-width: 1300px) {
+    font-size: 60px;
+  }
+  @include r($desktop) {
+    font-size: 56px;
+  }
+  @include r($lg) {
+    font-size: 52px;
+    margin-bottom: 20px;
+  }
+  @media (max-width: 860px) {
+    font-size: 48px;
+  }
+  @include r($tablet) {
+    font-size: 46px;
+  }
+  @media (max-width: 700px) {
+    font-size: 44px;
+  }
+  @media (max-width: 660px) {
+    font-size: 40px;
+  }
+  @media (max-width: 560px) {
+    font-size: 36px;
+  }
+  @include r($phone) {
+    font-size: 32px;
+  }
 }
 
 .section-title {

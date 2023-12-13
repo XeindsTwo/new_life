@@ -1,7 +1,17 @@
 .navigation {
   padding-top: 32px;
-  margin-bottom: 80px;
+  margin-bottom: 110px;
   font-size: 18px;
+  @include r($desktop) {
+    margin-bottom: 90px;
+  }
+  @include r($lg) {
+    margin-bottom: 70px;
+    padding-top: 28px;
+  }
+  @include r($tablet) {
+    margin-bottom: 60px;
+  }
 
   &--footer {
     mix-blend-mode: luminosity;
@@ -33,11 +43,8 @@
 
   &__logo {
     margin-right: 64px;
-
-    &--footer {
-      @media (max-width: 860px) {
-        margin-right: 0;
-      }
+    @media (max-width: 870px) {
+      margin-right: 34px;
     }
   }
 
