@@ -1,5 +1,3 @@
-Fancybox.bind("[data-fancybox]", {});
-
 const buttons = document.querySelectorAll('[data-target="modalContact"]');
 const body = document.body;
 let handleModalClose;
@@ -75,3 +73,5 @@ function addToggleListener(buttonId, hiddenSelector) {
 
 addToggleListener('buttonLang', '.navigation__lang--hidden');
 addToggleListener('buttonLangFooter', '.navigation__lang--hidden-footer');
+
+Fancybox.bind("[data-fancybox]", {});

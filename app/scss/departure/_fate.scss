@@ -1,18 +1,47 @@
 .fate {
   &__title {
     margin-bottom: 65px;
+    @include r($desktop) {
+      margin-bottom: 55px;
+    }
+    @media (max-width: 890px) {
+      margin-bottom: 45px;
+    }
+    @include r($tablet) {
+      margin-bottom: 40px;
+    }
+    @include r($sm) {
+      margin-bottom: 30px;
+    }
   }
 
   &__items {
     @include flex-column(64);
+    @include r($sm) {
+      gap: 50px;
+    }
   }
 
   &__item {
     display: flex;
     gap: 60px;
+    @media (max-width: 1100px) {
+      gap: 40px;
+    }
+    @media (max-width: 820px) {
+      flex-direction: column;
+      align-items: center;
+      gap: 25px;
+    }
+    @include r($sm) {
+      gap: 20px;
+    }
 
     &:nth-child(even) {
       flex-direction: row-reverse;
+      @media (max-width: 820px) {
+        flex-direction: column;
+      }
     }
   }
 
@@ -20,6 +49,18 @@
     max-width: 355px;
     width: 100%;
     position: relative;
+    max-height: 710px;
+    overflow: hidden;
+    @include r($lg) {
+      max-height: 630px;
+    }
+    @media (max-width: 930px) {
+      max-width: 300px;
+    }
+    @media (max-width: 820px) {
+      max-height: 450px;
+      height: 390px;
+    }
   }
 
   &__img {
@@ -27,11 +68,21 @@
     @include objectCoverBg;
     border-radius: 24px;
     overflow: hidden;
+    @include r($lg) {
+      border-radius: 17px;
+    }
+    @include r($sm) {
+      border-radius: 12px;
+    }
   }
 
   &__content {
     max-width: 705px;
     width: 100%;
+    @media (max-width: 820px) {
+      max-width: 600px;
+      text-align: center;
+    }
   }
 
   &__name {
@@ -46,5 +97,8 @@
   &__text {
     font-weight: 500;
     @include flex-column(15);
+    @include r($tablet) {
+      font-weight: 400;
+    }
   }
 }

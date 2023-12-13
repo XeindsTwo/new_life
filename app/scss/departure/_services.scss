@@ -3,6 +3,18 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 24px;
+    @include r($desktop) {
+      grid-gap: 20px;
+    }
+    @media (max-width: 1100px) {
+      grid-gap: 20px 15px;
+    }
+    @include r($lg) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 540px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
   &__item {
@@ -11,6 +23,16 @@
     border-radius: 24px;
     display: flex;
     flex-direction: column;
+    @media (max-width: 1100px) {
+      border-radius: 20px;
+    }
+    @include r($lg) {
+      padding: 30px 25px;
+    }
+    @include r($tablet) {
+      padding: 27px 20px;
+      border-radius: 16px;
+    }
   }
 
   &__name {
@@ -20,6 +42,20 @@
     letter-spacing: -0.39px;
     color: $white;
     margin-bottom: 12px;
+    @include r($desktop) {
+      font-size: 24px;
+    }
+    @media (max-width: 1100px) {
+      font-size: 22px;
+      letter-spacing: -0.25px;
+    }
+    @media (max-width: 660px) {
+      font-size: 20px;
+      letter-spacing: -0.15px;
+    }
+    @media (max-width: 540px) {
+      font-size: 22px;
+    }
   }
 
   &__description {
@@ -30,5 +66,9 @@
 
   &__btn {
     margin-top: auto;
+    @media (max-width: 540px) {
+      align-self: flex-start;
+      width: auto;
+    }
   }
 }

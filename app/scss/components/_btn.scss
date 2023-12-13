@@ -22,6 +22,9 @@
   &--red {
     padding: 17px 24px;
     border-radius: 9px;
+    @include r($sm) {
+      padding: 16px 24px;
+    }
   }
 
   &--long {

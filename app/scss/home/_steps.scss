@@ -4,12 +4,31 @@
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 24px;
     margin-bottom: 24px;
+    @include r($desktop) {
+      grid-gap: 20px;
+    }
+    @media (max-width: 960px) {
+      display: flex;
+      flex-wrap: wrap;
+      grid-gap: 20px;
+      justify-content: center;
+    }
+    @media (max-width: 670px) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__item,
   &__warning {
     background-color: $black300;
     border-radius: 26px;
+    @media (max-width: 1100px) {
+      border-radius: 22px;
+    }
+    @include r($lg) {
+      border-radius: 20px;
+    }
   }
 
   &__item {
@@ -18,6 +37,20 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    @include r($desktop) {
+      padding: 30px 25px;
+    }
+    @media (max-width: 1100px) {
+      padding: 30px 20px;
+    }
+    @media (max-width: 960px) {
+      max-width: 48%;
+      border-radius: 20px;
+    }
+    @media (max-width: 670px) {
+      max-width: 420px;
+      border-radius: 16px;
+    }
   }
 
   &__number,
@@ -44,12 +77,27 @@
     font-size: 26px;
     font-weight: 600;
     letter-spacing: -0.39px;
+    @include r($desktop) {
+      font-size: 24px;
+    }
+    @include r($lg) {
+      font-size: 22px;
+      letter-spacing: -0.20px;
+      margin-bottom: 7px;
+    }
+    @include r($tablet) {
+      margin-bottom: 12px;
+    }
   }
 
   &__text,
   &__description {
     font-weight: 500;
     letter-spacing: -0.18px;
+    @include r($tablet) {
+      font-size: 16px;
+      letter-spacing: -0.05px;
+    }
   }
 
   &__warning {
@@ -57,10 +105,31 @@
     display: flex;
     justify-content: space-between;
     gap: 50px;
+    @include r($desktop) {
+      padding: 30px 25px;
+    }
+    @media (max-width: 1100px) {
+      padding: 30px 20px;
+      gap: 30px;
+    }
+    @media (max-width: 960px) {
+      flex-direction: column;
+    }
+    @include r($tablet) {
+      padding: 25px 20px;
+    }
+    @include r($sm) {
+      gap: 25px;
+    }
   }
 
   &__content {
     max-width: 360px;
+    @media (max-width: 960px) {
+      max-width: 600px;
+      text-align: center;
+      margin: 0 auto;
+    }
   }
 
   &__title {
@@ -69,6 +138,22 @@
     line-height: 95%;
     letter-spacing: -0.51px;
     margin-bottom: 22px;
+    @media (max-width: 1100px) {
+      font-size: 32px;
+      letter-spacing: -0.36px;
+    }
+    @include r($lg) {
+      font-size: 30px;
+    }
+    @include r($tablet) {
+      font-size: 26px;
+      letter-spacing: -0.24px;
+    }
+    @media (max-width: 600px) {
+      font-size: 24px;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
   }
 
   &__videos {
@@ -76,15 +161,39 @@
     gap: 16px;
     max-width: 575px;
     width: 100%;
+    @media (max-width: 960px) {
+      margin: 0 auto;
+      max-width: 630px;
+    }
+    @media (max-width: 530px) {
+      flex-direction: column;
+    }
   }
 
   &__video {
     position: relative;
+    width: 100%;
+    @include r($tablet) {
+      height: 170px;
+    }
+    @media (max-width: 530px) {
+      height: 200px;
+    }
   }
 
   &__img {
     @include objectCoverBg;
     overflow: hidden;
     border-radius: 8px;
+    @media (max-width: 960px) {
+      width: 100%;
+    }
+    @include r($tablet) {
+      height: 170px;
+    }
+    @media (max-width: 530px) {
+      object-position: top;
+      height: 200px;
+    }
   }
 }

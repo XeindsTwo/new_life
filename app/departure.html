@@ -16,7 +16,8 @@
 </head>
 <body class="body">
 
-<header class="navigation">
+<div class="wrapper">
+    <header class="navigation">
     <div class="container">
         <div class="navigation__inner">
             <a class="navigation__logo logo" href="index.html">
@@ -55,8 +56,8 @@
         </div>
     </div>
 </header>
-<main>
-    <div class="start">
+    <main>
+        <div class="start">
     <div class="container">
         <div class="start__inner">
             <div class="start__content">
@@ -138,7 +139,7 @@
         </div>
     </div>
 </div>
-    <section class="services indent">
+        <section class="services indent">
     <div class="container">
         <h2 class="section-title">Наши услуги</h2>
         <ul class="services__list">
@@ -204,7 +205,7 @@
         </ul>
     </div>
 </section>
-    <section class="fate indent">
+        <section class="fate indent">
     <div class="container">
         <h2 class="fate__title section-title">Измени свою судьбу</h2>
         <ul class="fate__items">
@@ -299,15 +300,15 @@
         </ul>
     </div>
 </section>
-</main>
-<footer class="navigation navigation--footer">
+    </main>
+    <footer class="navigation navigation--footer">
     <div class="container">
-        <div class="navigation__inner">
-            <a class="navigation__logo logo" href="index.html">
+        <div class="navigation__inner navigation__inner--footer">
+            <a class="navigation__logo navigation__logo--footer logo" href="index.html">
                 <img src="images/icons/logo.svg" width="97" height="25" alt="логотип">
             </a>
             <nav>
-                <ul class="navigation__list">
+                <ul class="navigation__list navigation__list--footer">
                     <li>
                         <a class="navigation__link navigation__link--active" href="index.html">Главная</a>
                     </li>
@@ -319,7 +320,7 @@
                     </li>
                 </ul>
             </nav>
-            <div class="navigation__actions">
+            <div class="navigation__actions navigation__actions--footer">
                 <div class="navigation__languages navigation__languages--footer">
                     <button class="navigation__lang" id="buttonLangFooter" type="button">
                         <img class="navigation__decor" src="images/icons/ru.png" alt="русский язык">
@@ -340,6 +341,7 @@
         </div>
     </div>
 </footer>
+</div>
 <div class="modal" id="modalContact">
     <div class="modal__head">
         <span class="modal__title">Связь с нами</span>
