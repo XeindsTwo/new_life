@@ -17,8 +17,8 @@
                     </li>
                 </ul>
             </nav>
-            <div class="navigation__actions">
-                <div class="navigation__languages">
+            <div class="navigation__actions navigation__actions--header">
+                <div class="navigation__languages navigation__languages--header">
                     <button class="navigation__lang" id="buttonLang" type="button">
                         <img class="navigation__decor" src="images/icons/ru.png" alt="русский язык">
                         Rus
@@ -32,8 +32,78 @@
                         Ukr
                     </a>
                 </div>
-                <button class="navigation__btn btn" data-toggle="modal" data-target="modalContact">Связаться с нами</button>
+                <button class="navigation__btn navigation__btn--header btn" data-toggle="modal"
+                        data-target="modalContact">Связаться с нами
+                </button>
+                <button class="menu-btn" type="button">
+                    <span class="menu-btn__line"></span>
+                    <span class="sr-only">Взаимодействовать с меню</span>
+                </button>
             </div>
+        </div>
+        <div class="navigation__mobile">
+            <nav>
+                <ul class="navigation__list navigation__list--mobile">
+                    <li>
+                        <a class="navigation__link navigation__link--active" href="index.html">Главная</a>
+                    </li>
+                    <li>
+                        <a class="navigation__link" href="departure.html">Выезд</a>
+                    </li>
+                    <li>
+                        <a class="navigation__link" href="payment.html">Оплата</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="navigation__languages navigation__languages--mobile">
+                <button class="navigation__lang navigation__lang--active" type="button">
+                    <img class="navigation__decor" src="images/icons/ru.png" alt="русский язык">
+                    Rus
+                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.16672 8L9.34926 12.4422C9.72375 12.7632 10.2764 12.7632 10.6508 12.4422L15.8334 8"
+                              stroke="white" stroke-opacity="0.6" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+                <a class="navigation__lang" href="index_uk.html">
+                    <img class="navigation__decor" src="images/icons/uk.png" alt="укр. мова">
+                    Ukr
+                </a>
+            </div>
+            <ul class="navigation__socials">
+                <li>
+                    <a class="navigation__social modal__link modal__link--header modal__link--telegram"
+                       href="https://t.me/morphism_cases" target="_blank">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21.4854 12.3881C22.2214 11.6521 22.9521 9.93479 19.8854 12.0201C17.0207 13.9917 14.1366 15.9349 11.2334 17.8495C10.7913 18.0494 10.3134 18.1578 9.82836 18.1684C9.3433 18.1789 8.86111 18.0913 8.41076 17.9108C6.57076 17.3588 4.42276 16.6228 4.42276 16.6228C4.42276 16.6228 2.95609 15.7015 5.46676 14.7201C5.46676 14.7201 16.0814 10.3641 19.7628 8.82946C21.1734 8.21612 25.9588 6.25346 25.9588 6.25346C25.9588 6.25346 28.1681 5.39346 27.9841 7.48012C27.9228 8.33879 27.4321 11.3468 26.9414 14.5975C26.2041 19.1988 25.4068 24.2308 25.4068 24.2308C25.4068 24.2308 25.2841 25.6415 24.2414 25.8868C23.1253 25.8679 22.0468 25.4797 21.1748 24.7828C20.9294 24.5988 16.5734 21.8375 14.9774 20.4881C14.8151 20.3781 14.6832 20.2289 14.594 20.0542C14.5048 19.8796 14.4613 19.6852 14.4674 19.4892C14.4735 19.2932 14.5291 19.102 14.629 18.9332C14.7289 18.7645 14.8699 18.6238 15.0388 18.5241C17.2278 16.5214 19.3771 14.4756 21.4854 12.3881Z"
+                                  fill="white"/>
+                        </svg>
+                        Telegram
+                    </a>
+                </li>
+                <li>
+                    <a class="navigation__social modal__link modal__link--header modal__link--twitter"
+                       href="https://t.me/morphism_agency" target="_blank">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M29.3334 7.73331C28.3312 8.1681 27.2713 8.45553 26.1867 8.58664C27.331 7.90307 28.1884 6.82768 28.6001 5.55997C27.5248 6.20006 26.3478 6.65104 25.1201 6.89331C24.2995 6.0034 23.2067 5.41104 22.0132 5.20911C20.8196 5.00718 19.5928 5.20712 18.5251 5.77756C17.4575 6.348 16.6093 7.25668 16.1137 8.36109C15.6181 9.4655 15.5031 10.7032 15.7867 11.88C13.6126 11.77 11.486 11.2039 9.54495 10.2185C7.60391 9.233 5.89188 7.85023 4.52008 6.15997C4.03893 7.0002 3.78611 7.95174 3.78675 8.91997C3.78504 9.81915 4.0057 10.7048 4.42909 11.4981C4.85247 12.2913 5.46544 12.9676 6.21341 13.4666C5.34405 13.443 4.49326 13.2097 3.73341 12.7866V12.8533C3.73993 14.1132 4.18141 15.3321 4.98317 16.3039C5.78493 17.2758 6.89776 17.9408 8.13341 18.1866C7.65775 18.3314 7.16391 18.4077 6.66675 18.4133C6.3226 18.4093 5.97931 18.3781 5.64008 18.32C5.99196 19.4037 6.67291 20.3508 7.58818 21.0295C8.50345 21.7082 9.60752 22.0847 10.7467 22.1066C8.82302 23.6203 6.44793 24.4464 4.00008 24.4533C3.55439 24.4548 3.10906 24.428 2.66675 24.3733C5.16599 25.987 8.0785 26.8436 11.0534 26.84C13.1063 26.8613 15.1429 26.4733 17.0442 25.6987C18.9455 24.9242 20.6734 23.7785 22.127 22.3286C23.5806 20.8788 24.7307 19.1538 25.5102 17.2545C26.2896 15.3552 26.6828 13.3196 26.6667 11.2666C26.6667 11.04 26.6667 10.8 26.6667 10.56C27.713 9.77972 28.6154 8.82321 29.3334 7.73331Z"
+                                  fill="white"/>
+                        </svg>
+                        Twitter
+                    </a>
+                </li>
+                <li>
+                    <a class="navigation__social modal__link modal__link--header modal__link--facebook"
+                       href="https://t.me/morphism_cases" target="_blank">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M25.75 3H6.25C4.45762 3 3 4.45762 3 6.25V25.75C3 27.5424 4.45762 29 6.25 29H25.75C27.5424 29 29 27.5424 29 25.75V6.25C29 4.45762 27.5424 3 25.75 3Z"
+                                  fill="white"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M24.9375 16H20.875V12.75C20.875 11.853 21.603 11.9375 22.5 11.9375H24.125V7.875H20.875C19.5821 7.875 18.3421 8.38861 17.4279 9.30285C16.5136 10.2171 16 11.4571 16 12.75V16H12.75V20.0625H16V29H20.875V20.0625H23.3125L24.9375 16Z"
+                                  fill="#1E1E1E"/>
+                        </svg>
+                        Facebook
+                    </a>
+                </li>
+            </ul>
         </div>
     </div>
 </header>

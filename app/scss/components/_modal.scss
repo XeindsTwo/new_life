@@ -23,7 +23,7 @@
     transform: translate(-50%, -50%);
     opacity: 1;
     pointer-events: auto;
-    z-index: 100;
+    z-index: 1000;
     user-select: auto;
   }
 
@@ -116,6 +116,10 @@
       &::after {
         top: 0;
       }
+    }
+
+    &--header {
+      font-size: 18px;
     }
 
     &--telegram {

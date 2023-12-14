@@ -1,0 +1,76 @@
+.menu-btn {
+  height: 48px;
+  width: 48px;
+  cursor: pointer;
+  z-index: 1000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 50%;
+  border: 1.5px solid transparent;
+  background-color: $black100;
+  padding: 18px 16px;
+  transition: background-color .4s, opacity .4s;
+  @media (max-width: 860px) {
+    display: block;
+  }
+
+  &:hover {
+    background-color: rgba($red, .8);
+  }
+
+  &:active {
+    opacity: .5;
+  }
+
+  &__line,
+  &__line::after,
+  &__line::before {
+    background-color: $white;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 15px;
+    height: 2px;
+    transition: .3s ease-in-out .3s;
+  }
+
+  &__line::after,
+  &__line::before {
+    position: absolute;
+  }
+
+  &__line {
+    position: relative;
+    display: flex;
+
+    &::before {
+      margin-top: -6px;
+    }
+
+    &::after {
+      margin-top: 6px;
+    }
+  }
+
+  &.active {
+    .menu-btn__line {
+      background: transparent;
+      transition: .5s ease-in-out;
+      transform: rotate(-90deg);
+
+      &::before {
+        margin-top: 0;
+        transform: rotate(-45deg);
+        transition-delay: .5s;
+      }
+
+      &::after {
+        margin-top: 0;
+        transform: rotate(45deg);
+        transition-delay: .5s;
+      }
+    }
+  }
+}

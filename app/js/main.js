@@ -1,7 +1,22 @@
 const buttons = document.querySelectorAll('[data-target="modalContact"]');
 const body = document.body;
+const menuBtn = document.querySelector('.menu-btn');
+const menu = document.querySelector('.navigation__mobile');
 let handleModalClose;
 let clickOutsideModal;
+
+menuBtn.addEventListener('click', () => {
+    if (body.classList.contains('body--active') && menuBtn.classList.contains('active') && menu.classList.contains('navigation__mobile--active')) {
+        body.classList.remove('body--active');
+        menuBtn.classList.remove('active');
+        menu.classList.remove('navigation__mobile--active');
+    } else {
+        body.classList.add('body--active');
+        menuBtn.classList.add('active');
+        menu.classList.add('navigation__mobile--active');
+    }
+    menuBtn.blur();
+});
 
 buttons.forEach(button => {
     button.addEventListener('click', () => {
