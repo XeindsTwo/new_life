@@ -26,7 +26,7 @@ buttons.forEach(button => {
 
         const openModal = () => {
             modal.classList.add('modal--active');
-            body.classList.add('body--active');
+            body.classList.add('body--modal');
             isOpening = false;
 
             const closeButton = modal.querySelector('.modal__close');
@@ -57,7 +57,7 @@ buttons.forEach(button => {
 
 const closeModal = (modal) => {
     modal.classList.remove('modal--active');
-    body.classList.remove('body--active');
+    body.classList.remove('body--modal');
     if (handleModalClose) {
         document.removeEventListener('keyup', handleModalClose);
     }
